@@ -1,0 +1,39 @@
+/*  SIMPLE ARRAY SUM
+
+
+SAMPLE INPUT :
+6
+1 2 3 4 10 11
+
+
+SAMPLE OUTPUT:
+31
+
+*/
+
+//CODING
+
+import java.util.Scanner;
+
+public class Solution
+{
+    public static void main(String[] args)
+    {
+        Scanner in = new Scanner(System.in);
+        int sum=0;
+        //size of an array
+        int size = in.nextInt();
+        
+        //scan array elements
+        int[] elmts = new int[size];
+        for(int i=0;i<size;i++)
+            elmts[i] = in.nextInt();
+        
+        //sum of all yhe elements in an array
+        for(int i=0;i<size;i++)
+            sum=sum+elmts[i];
+        
+        System.out.print(sum);
+
+    }
+}
