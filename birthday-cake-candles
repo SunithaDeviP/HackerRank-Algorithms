@@ -1,0 +1,27 @@
+//link to the question : https://www.hackerrank.com/challenges/birthday-cake-candles/problem
+
+//solution
+
+import java.util.Scanner;
+public class Solution{
+    public static void main(String[] args){
+       
+        Scanner in = new Scanner(System.in);
+        int height = in.nextInt();
+        long[] candles = new long[height];
+        
+        long max=0,maxCount=0;
+        
+        for(int i=0;i<height;i++){
+            candles[i] = in.nextInt();
+            if(candles[i]>max){
+                maxCount=1;
+                max=candles[i];
+            }
+            else if(candles[i]==max)
+                maxCount+=1;
+        }
+
+        System.out.print(maxCount);
+    }
+}
