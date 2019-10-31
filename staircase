@@ -1,0 +1,23 @@
+//link to the question: https://www.hackerrank.com/challenges/staircase/problem
+
+//soution
+
+
+import java.util.Scanner;
+public class Solution{
+    public static void main(String[] args)
+    {
+        Scanner in = new Scanner(System.in);
+        int size = in.nextInt();
+        
+        for(int i=0;i<size;i++,System.out.print("\n")){
+            for(int j=0;j<size;j++){
+            
+                if(i+j>=size-1)
+                    System.out.print("#");
+                else
+                    System.out.print(" ");
+            }
+        }
+    }
+}
