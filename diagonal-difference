@@ -1,0 +1,34 @@
+//link to the question : https://www.hackerrank.com/challenges/diagonal-difference/problem
+
+//solution:
+
+import java.util.Scanner;
+import java.lang.Math;
+
+public class Solution{
+    public static void main(String[] args){
+      
+      Scanner in = new Scanner(System.in);
+      
+      int size = in.nextInt();
+      int[][] diagonal = new int[size][size];
+      
+      //scan the input values
+        for(int i=0;i<size;i++)
+        {
+            for(int j=0;j<size;j++){
+                diagonal[i][j] = in.nextInt();
+            }
+        }
+
+        int diff1=0,diff2=0;
+        
+        for(int i=0;i<size;i++)
+        {
+            diff1=diff1+diagonal[i][i];         //diagonal from left to right
+            diff2=diff2+diagonal[i][size-i-1];  //diagonal from right to left
+        }
+        
+        System.out.print(Math.abs(diff1-diff2));
+    }
+}
