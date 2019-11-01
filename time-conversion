@@ -1,0 +1,24 @@
+//link to the question : https://www.hackerrank.com/challenges/time-conversion/problem
+
+import java.util.Scanner;
+import java.util.Date;
+import java.text.SimpleDateFormat;
+public class Solution{
+    public static void main(String[] args)throws Exception{
+
+        Scanner in = new Scanner(System.in);
+
+        String date = in.next();
+        
+        //convert string to date
+        SimpleDateFormat inputFormat = new SimpleDateFormat("hh:mm:ssaa");
+        Date inputDate = inputFormat.parse(date);
+
+        //convert the 12hr to 24hr format
+        SimpleDateFormat outputFormat = new SimpleDateFormat("HH:mm:ss");
+        String outputDate = outputFormat.format(inputDate);
+
+        System.out.println(outputDate);
+        
+    }
+}
